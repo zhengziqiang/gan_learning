@@ -22,8 +22,6 @@ fake_input = tf.get_variable("fake_input", [569, 30], dtype=tf.float32,
 fake_label = tf.constant(2, tf.int32, [569], "fake")
 fake_label = tf.one_hot(fake_label, 3)
 
-
-# 这里应该是
 def multilayer_perceptron(x, name):
     with tf.variable_scope(name):
         weigh1 = tf.get_variable("weight1", [n_input, n_hidden_1], dtype=tf.float32,
